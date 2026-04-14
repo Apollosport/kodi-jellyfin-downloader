@@ -27,3 +27,8 @@ Native Android TV streaming apps do not support offline downloading. If you try 
 ## Known Limitations
 * **External Subtitles:** This script intercepts the raw video file. If your movies are `.mkv` files with embedded subtitles, they will download perfectly. However, external `.srt` files sitting next to your movies on your server are not currently fetched.
 * **No Simultaneous Downloads:** There is currently no active queue manager. Please allow a bulk download or single file download to complete before triggering another one, or the Kodi UI may throw an error.
+
+## Disclaimer
+**Use at your own risk.** This add-on is provided "as-is" without any warranty. By using this software, you agree that the developer is not responsible for any corrupted files, data loss, USB drive formatting issues, or instability caused to your Kodi installation. 
+
+This is an unofficial, community-built tool and is not affiliated with, endorsed by, or supported by the official Jellyfin or Kodi development teams.
