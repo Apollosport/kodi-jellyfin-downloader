@@ -1,11 +1,11 @@
 # Jellyfin Local Downloader for Kodi
 
-A Kodi Context Menu add-on that enables direct, offline downloading from a Jellyfin server to local or external storage. 
+A Kodi Context Menu add-on that enables direct, offline downloading from a Jellyfin server to local or external storage.
 
 This was specifically built to bypass the strict "Scoped Storage" write permissions introduced in Android TV 11, making it perfect for loading up a USB drive on portable projectors (like the BenQ GV50), Nvidia Shields, or Android TV boxes for offline viewing.
 
 ## The Problem This Solves
-Native Android TV streaming apps do not support offline downloading. If you try to sideload mobile versions of Jellyfin or Findroid, Android TV 11's security blocks them from writing to external USB drives. 
+Native Android TV streaming apps do not support offline downloading. If you try to sideload mobile versions of Jellyfin or Findroid, Android TV 11's security blocks them from writing to external USB drives.
 
 **The Workaround:** Because Kodi natively requests proper system-level storage permissions, this add-on uses Kodi's internal Virtual File System (VFS) to securely pull video files from your Jellyfin server and write them directly to your USB drive.
 
@@ -26,7 +26,7 @@ Native Android TV streaming apps do not support offline downloading. If you try 
 
 ## Known Limitations
 * **External Subtitles:** This script intercepts the raw video file. If your movies are `.mkv` files with embedded subtitles, they will download perfectly. However, external `.srt` files sitting next to your movies on your server are not currently fetched.
-* **No Simultaneous Downloads:** There is currently no active queue manager. Please allow a bulk download or single file download to complete before triggering another one, or the Kodi UI may throw an error.
+* **No Playback While Queuing:** Because this add-on briefly initializes the Kodi video player to extract the secure HTTP links, you cannot watch another video in Kodi while a background download queue is processing.
 
 ## Disclaimer
 **Use at your own risk.** This add-on is provided "as-is" without any warranty. By using this software, you agree that the developer is not responsible for any corrupted files, data loss, USB drive formatting issues, or instability caused to your Kodi installation. 
